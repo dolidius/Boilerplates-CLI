@@ -3,7 +3,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const CHOICES = fs.readdirSync(`${__dirname}/templates`);
+const CHOICES = fs.readdirSync(`${__dirname}/boilerplates`);
 
 const QUESTIONS = [
 
@@ -29,9 +29,11 @@ inquirer.prompt(QUESTIONS)
   .then(answers => {
     const projectChoice = answers['project-choice'];
     const projectName = answers['project-name'];
-    const templatePath = `${__dirname}/templates/${projectChoice}`;
+    const templatePath = `${__dirname}/boilerplates/${projectChoice}`;
 
     fs.mkdirSync(`${CURR_DIR}/${projectName}`);
+
+    console.log(`Successfully created ${projectChoice} boilerplate named ${projectName}`);
 
     createDirectoryContents(templatePath, projectName);
 });
