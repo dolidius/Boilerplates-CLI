@@ -1,0 +1,19 @@
+{
+  "name": "boilerplates",
+  "version": "1.0.0",
+  "description": "CLI For Boilerplates",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grzegorz Brzozowski",
+  "license": "ISC",
+  "bin": {
+    "boilerplates": "./cli.js"
+  },
+  "dependencies": {
+    "inquirer": "^6.2.0",
+    "node-sass": "^4.10.0",
+    "react-router-dom": "^4.3.1"
+  }
+}
